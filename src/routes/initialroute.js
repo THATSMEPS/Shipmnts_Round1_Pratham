@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const {data, data2, etc, somefunction} = require('../controllers/boilerplatecontroller.js');
 
-router.get('/', (req, res) => {
-    res.json({ message: "Welcome to the API. Routes will be setup here." });
-});
+router.get('/', somefunction);
 
 module.exports = router;

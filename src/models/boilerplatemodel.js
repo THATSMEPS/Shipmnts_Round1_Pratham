@@ -4,6 +4,7 @@ const placeholderSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        unique:true
     },
     createdAt: {
         type: Date,

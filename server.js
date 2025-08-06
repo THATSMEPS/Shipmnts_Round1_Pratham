@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const connectDB = require('./src/config/db');
-const mainRouter = require('./src/routes');
+const initialRoute = require('./src/routes/initialroute.js');
 
 connectDB();
 
@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Main API route
-app.use('/api', mainRouter);
+app.use('/api', initialRoute);
 
 // A simple health-check endpoint to show the server is running
 app.get('/health', (req, res) => {
